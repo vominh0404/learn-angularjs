@@ -1,0 +1,164 @@
+@head: #141e2f;
+@content: #1f2b41;
+@bot: #fff;
+@tx: #f1b545;
+@bt: #f1b645;
+@font-face {
+    font-family: Opensand Light;
+    src: url(../fonts/Lato-Light.ttf);
+}
+.container {
+    width: 1230px;
+}
+
+/* SEARCH FORM */
+
+html,
+body,
+strong,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label,
+button,
+input {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+}
+body {
+    background: @content;
+}
+header {
+    background: @head;
+    h1 {
+        text-align: center;
+        margin: 30px auto;
+    }
+}
+section {
+    background: @content;
+    padding-top: 125px;
+    .content {
+        margin-bottom: 125px;
+        h2 {
+            font-size: 45px;
+            color: @tx;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            margin-bottom: 125px;
+            display: table;
+            width: 100%;
+            label {
+                width: 60px;
+                height: 60px;
+                float: left;
+                border-radius: 50%;
+                border: 2px solid #b3b3b3;
+                font-size: 24px;
+                text-align: center;
+                line-height: 60px;
+            }
+            p {
+                margin-left: 90px;
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+footer {
+    background: @bot;
+    color: black;
+    padding: 90px 0;
+    .logo {
+        text-align: center
+    }
+    .form-notify {
+        margin-bottom: 50px;
+    }
+    h3,
+    strong {
+        color: black;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 28px;
+    }
+    a {
+        color: @tx
+    }
+    .social {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 25px;
+            width: 20px;
+            height: 20px;
+            background: #444;
+            text-align: center;
+            border-radius: 2px;
+            i {
+                line-height: 20px;
+                color: white;
+            }
+        }
+    }
+}
+textarea:focus,
+input:focus {
+    outline: none;
+}
+.text-center {
+    text-align: center
+}
+.form-notify {
+    display: table;
+    clear: both;
+    input,
+    button {
+        float: left;
+    }
+}
+.line {
+    border-top: 2px dashed #dadada;
+    margin: 30px 0;
+    height: 1px;
+}
+input {
+    border: 0;
+    border-bottom: 1px solid #b3b3b3;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-right: 20px;
+    background: transparent;
+    color: #b3b3b3;
+    width: 300px;
+}
+button {
+    border-radius: 2px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    background: @bt;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+}

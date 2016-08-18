@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Learn Angulajs</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="col-sm-12">
+                <div ng-app="myapp">
+                    <div ng-controller="ContentController">
+                        <h2>Xin chào {{data.title}} đến với {{data.website}}!</h2>
+                    </div>
+
+                    <div class="line">&nbsp;</div>
+
+                    <div ng-controller="MyController">
+                        Nhập tên của bạn:
+                        <input type="text" value="" ng-model="username">
+                        <button ng-click='sayHello()'>In thông báo</button>
+                        <br>
+                        <h3>{{greeting}}</h3>
+                    </div>
+                    <script>
+                        angular.module("myapp", [])
+                            .controller("ContentController", function($scope) {
+                                $scope.data = {
+                                    title: 'Võ Minh',
+                                    website: 'ngôn ngữ AngularJs: http://freetuts.net/hoc-angularjs/angularjs-can-ban'
+                                };
+                            })
+                            .controller('MyController', ['$scope', function($scope) {
+                                $scope.sayHello = function() {
+                                    $scope.greeting = 'Xin chào ' + $scope.username + '!';
+                                };
+                            }]);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>
